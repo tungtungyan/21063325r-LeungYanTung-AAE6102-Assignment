@@ -64,6 +64,45 @@ Therefore, the semimajor axis (a) is a=〖sqeta〗^2<img width="128" alt="Screen
 <br />Then, use Kepler’s equation of eccentric anomaly is solved by iteration.
 
 E_k=E_0-e sin⁡〖E_k 〗<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
+Calculate the true anomaly:
+ν_k=tan^(-1)⁡{((√(1-e^2 )  sin⁡〖E_k 〗)/(1-e cos⁡〖E_k 〗 ))/((cos⁡〖E_k 〗-e)/(1-e cos⁡〖E_k 〗 ))}
+argument of latitude:
+
+Φ_k=ν_k+ω
+
+Use the Second Harmonic Perturb to find to Correction value:
+Argument of latitude Correction:
+δu_k=c_us  sin⁡〖2Φ_k 〗+c_us  cos⁡〖2Φ_k 〗
+Radius Correction:
+δr_k=c_rs  sin⁡〖2Φ_k 〗+c_rs  cos⁡〖2Φ_k 〗
+Inclination correction:
+δi_k=c_is  sin⁡〖2Φ_k 〗+c_is  cos⁡〖2Φ_k 〗
+
+Use the Correction value for Corrected:
+Corrected argument of latitude:
+u_k=Φ_k+δu_k
+Corrected radius:
+r_k=a(1-e cos⁡〖E_k 〗)+δr_k
+Corrected Inclination:
+i_k=i_o+δi_k+(IDOT)t_k
+IDOT in the Column 17 of eph.dat.
+
+Corrected longitude of ascending node:
+Ω_k=Ω_o+(Ω-Ω_e ) t_k-Ω_e t_oe
+Position in orbital plane:
+x-coordinate:
+〖x_k〗^'=r_k  cos⁡〖u_k 〗
+
+y-coordinate:
+〖y_k〗^'=r_k  sin⁡〖u_k 〗
+
+Therefor,
+The Earth-fixed coordinates calculate by 
+
+x_k=〖x_k〗^'  cos⁡〖Ω_k 〗-〖y_k〗^'  cos⁡〖i_k 〗 x sin⁡〖Ω_k 〗
+y_k=〖x_k〗^'  sin⁡〖Ω_k 〗+〖y_k〗^'  cos⁡〖i_k 〗  cos⁡〖Ω_k 〗
+z_k=〖y_k〗^'  sin⁡〖i_k 〗
+
 
 However, the coordinates have some rotation error when transformed the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
 
