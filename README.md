@@ -59,7 +59,7 @@ t=t_SV-〖∆t〗_SV
 t_SV: The individual satellite time.
 
 	Determine the broadcast satellite clock error.
-	<br />
+<br />
 	Estimate the tropospheric delay for each satellite (optional).
 	
 	use the linerized GPS measurement equation developed in class to estimate the vector δxˆ
