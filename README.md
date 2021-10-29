@@ -62,11 +62,14 @@ t_SV: The individual satellite time.
 <br />
 	
 	Estimate the tropospheric delay for each satellite (optional).
-	
+<br />
+		
 	use the linerized GPS measurement equation developed in class to estimate the vector δxˆ
-	
+<br />
+		
 	update the estimate of the user position: X0 (new)= X0 (old)+δxˆ
-	
+<br />
+		
 	if δxˆ <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
 
 
