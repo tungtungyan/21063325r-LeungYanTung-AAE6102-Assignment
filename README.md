@@ -66,21 +66,31 @@ Therefore, the semimajor axis (a) is a=〖sqeta〗^2<img width="128" alt="Screen
 E_k=E_0-e sin⁡〖E_k 〗<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
 Calculate the true anomaly:
 ν_k=tan^(-1)⁡{((√(1-e^2 )  sin⁡〖E_k 〗)/(1-e cos⁡〖E_k 〗 ))/((cos⁡〖E_k 〗-e)/(1-e cos⁡〖E_k 〗 ))}
+<img width="289" alt="Screenshot 2021-10-29 at 4 51 27 PM" src="https://user-images.githubusercontent.com/71690213/139410511-9387819f-9c11-454c-a1c0-7506a31485d2.png">
+
 argument of latitude:
 
 Φ_k=ν_k+ω
+<img width="132" alt="Screenshot 2021-10-29 at 4 51 37 PM" src="https://user-images.githubusercontent.com/71690213/139410530-44e28dc8-b853-4c0f-bbea-2e2b3d708fc5.png">
 
 Use the Second Harmonic Perturb to find to Correction value:
 Argument of latitude Correction:
 δu_k=c_us  sin⁡〖2Φ_k 〗+c_us  cos⁡〖2Φ_k 〗
+<img width="306" alt="Screenshot 2021-10-29 at 4 51 47 PM" src="https://user-images.githubusercontent.com/71690213/139410551-83e449c2-f57c-42c2-851d-bdb240e07a27.png">
+
 Radius Correction:
 δr_k=c_rs  sin⁡〖2Φ_k 〗+c_rs  cos⁡〖2Φ_k 〗
+<img width="295" alt="Screenshot 2021-10-29 at 4 51 58 PM" src="https://user-images.githubusercontent.com/71690213/139410597-09dc2425-67c4-4b83-afd7-d752548ca7b1.png">
+
 Inclination correction:
 δi_k=c_is  sin⁡〖2Φ_k 〗+c_is  cos⁡〖2Φ_k 〗
+<img width="290" alt="Screenshot 2021-10-29 at 4 52 06 PM" src="https://user-images.githubusercontent.com/71690213/139410605-1b29fd4d-be7a-420a-8fec-e7c02a81cac9.png">
 
 Use the Correction value for Corrected:
 Corrected argument of latitude:
 u_k=Φ_k+δu_k
+<img width="290" alt="Screenshot 2021-10-29 at 4 52 06 PM" src="https://user-images.githubusercontent.com/71690213/139410625-c2c9f946-fae7-4943-8b0c-02d8c4fc6571.png">
+
 Corrected radius:
 r_k=a(1-e cos⁡〖E_k 〗)+δr_k
 Corrected Inclination:
