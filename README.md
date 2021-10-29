@@ -43,25 +43,35 @@ Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s positi
 
 First, calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
 Square root of semi-major axis a (Sqrta) was save in the Column 10 of eph.dat. 
-Therefore, the semimajor axis (a) is a=〖sqeta〗^2
+Therefore, the semimajor axis (a) is a=〖sqeta〗^2<img width="128" alt="Screenshot 2021-10-29 at 4 50 39 PM" src="https://user-images.githubusercontent.com/71690213/139407961-a6c07131-4723-4909-a11d-1709382fe2d7.png">
+
 <br />The corrected mean motion(n):
-<br />n=n_0-∆n
+<br />n=n_0-∆n<img width="127" alt="Screenshot 2021-10-29 at 4 50 45 PM" src="https://user-images.githubusercontent.com/71690213/139408058-e0d4f313-77b9-4fb8-8db9-efe4133368d0.png">
+
 <br />Computed mean motion (n_0)
-<br />n_0=√(mu/a^3 )
+<br />n_0=√(mu/a^3 )<img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408090-f0b05a1b-6199-4a8f-b3de-87be78e7378d.png">
+
+<br />n_0=√(mu/a^3 )<img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408228-396bd7d3-b34c-41e5-b73f-be06245e6d24.png">
+
 <br />Time from ephemeris epoch (t_k):
-<br />t_k=t-〖∆t〗_oe
+<br />t_k=t-〖∆t〗_oe<img width="135" alt="Screenshot 2021-10-29 at 4 51 02 PM" src="https://user-images.githubusercontent.com/71690213/139408243-021110ba-8c6a-48b9-b6f0-ae97f42bc160.png">
+
 <br />t_oeis reference time of ephemeris parameters (s). 
 <br />Mean anomaly:
-<br />M_k=M_0+nt_k
+<br />M_k=M_0+nt_k<img width="153" alt="Screenshot 2021-10-29 at 4 51 07 PM" src="https://user-images.githubusercontent.com/71690213/139408255-0fd371b8-f0d8-427d-9f44-58128baf3569.png">
+
 <br />Set the maximum number of iterations is 10.
 <br />Then, use Kepler’s equation of eccentric anomaly is solved by iteration.
 
-E_k=E_0-e sin⁡〖E_k 〗
+E_k=E_0-e sin⁡〖E_k 〗<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
+
 
 Calculate the satellite clock offset (t).
 
 <br />t=t_SV-〖∆t〗_SV
 <br />〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_r
+	<img width="289" alt="Screenshot 2021-10-29 at 4 51 27 PM" src="https://user-images.githubusercontent.com/71690213/139408321-b6fe2752-a780-4a30-a99e-a87148305b09.png">
+
 <br />t_SV: The individual satellite time.
 
 	Determine the broadcast satellite clock error.
