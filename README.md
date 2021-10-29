@@ -80,12 +80,19 @@ rcvr.dat is an 8x7 matrix containing raw ranging information. Each of the 8 rows
 
 Column	Symbol	Meaning
 Column 1: 	rcvr_tow 	receiver time of week(s)
+		     <br />
 Column 2:	Svid 	satellite PRN number (1 – 32)
+	<br />
 Column 3:	pr	pseudorange (m)
+	<br />
 Column 4:	cycles	number of accumulated cycles
+	<br />
 Column 5:	Phase	to convert to (0 – 359.99) mult. by 360/2048
+	<br />
 Column 6:	slp_dtct	0 = no cycle slip detected; non 0 = cycle slip
+	<br />
 Column 7:	snr_dbhz	signal to noise ratio (dB-Hz)
+	<br />
 
 
 Data File Format of eph.dat:
@@ -95,31 +102,52 @@ eph.dat is a 8 x 24 matrix containing the ephemeris data from a GPS receiver. Th
 
 Column	Symbol	Meaning
 Column 1: 	rcvr_tow 	receiver time of week(s)
-		      <br />  
+<br />  
 Column 2:	Svid 	satellite PRN number (1 – 32)
 	 <br />  
 Column 3:	toc  	reference time of clock parameters (s)
 	 <br />  
 Column 4:	toe 	reference time of ephemeris parameters (s)
+	<br />
 Column 5:	af0	clock correction coefficient – group delay (s) 
+	<br />
 Column 6:	af1	clock correction coefficient (s/s)
+	<br />
 Column 7:	af2	clock correction coefficient (s/s/s) 
+	<br />
 Column 8:	ura	user range accuracy (m)
+	<br />
 Column 9:	e	eccentricity (-)
+	<br />
 Column 10:	sqrta	square root of semi-major axis a (m**1/2)
+	<br />
 Column 11:	dn	mean motion correction (r/s)
+	<br />
 Column 12:	m0	mean anomaly at reference time (r)
+	<br />
 Column 13:	w	argument of perigee (r)
+	<br />
 Column 14:	omg0	right ascension (r)
+	<br />
 Column 15:	i0	inclination angle at reference time (r)
+	<br />
 Column 16:	odot	rate of right ascension (r/s)
+	<br />
 Column 17:	idot	rate of inclination angle (r/s)
+	<br />
 Column 18:	cus 	argument of latitude correction, sine (r)
+	<br />
 Column 19:	cuc	argument of latitude correction, cosine (r)
+	<br />
 Column 20:	cis	inclination correction, sine (r)
+	<br />
 Column 21:	cic 	inclination correction, cosine (r)
+	<br />
 Column 22:	crs	radius correction, sine (m)
+	<br />
 Column 23:	crc 	radius correction, cosine (m)
+	<br />
 Column 24:	iod	issue of data number
+	<br />
 
 
