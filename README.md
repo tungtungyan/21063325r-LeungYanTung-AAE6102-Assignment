@@ -131,6 +131,8 @@ The rotational matrix for coordinate transform correction:
 t=t_SV-〖∆t〗_SV
 〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_(r )
 〖∆t〗_r=F*e*sqeta sin⁡(E_k)
+	<img width="452" alt="Screenshot 2021-10-29 at 4 55 01 PM" src="https://user-images.githubusercontent.com/71690213/139415999-7a3c8b68-b4ef-43bc-bac2-5f1e7881669c.png">
+
 t_SV: The individual satellite time.
 
 	
@@ -138,16 +140,21 @@ t_SV: The individual satellite time.
 <br />First, resolve the tropospheric error of each iteration. 
 Using iterative algorithm to transform the initial position of ECEF coordinates to Geodetic coordinates (ϕ,λ,h).
 ECEF coordinates=[■(-2694685.473@-4293642.366@3857878.924)]
+<img width="169" alt="Screenshot 2021-10-29 at 4 57 13 PM" src="https://user-images.githubusercontent.com/71690213/139416027-c2b1ea05-8dd0-4024-b263-4050cb7e06a0.png">
 
 Then, Transform the Geodetic coordinates to east, north, up (ENU) coordinates.
 
 
 Using Saastamoinen model to enale tropospheric error estimation.
-z=π/2-sin^(-1)⁡〖h/(ϕ^2+ λ^2 )^2 〗
+z=π/2-sin^(-1)⁡〖h/(ϕ^2+ λ^2 )^2 〗<img width="261" alt="Screenshot 2021-10-29 at 4 57 35 PM" src="https://user-images.githubusercontent.com/71690213/139416037-0ec706c5-c046-456f-9a2e-62625d2e020a.png">
+
 Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
 
+trph=0.0022768/(cos(z))*p/(1-0.00266*cos(2.0 * ϕ) - 0.00028 * H / 1e3))  <img width="688" alt="Screenshot 2021-10-29 at 4 58 12 PM" src="https://user-images.githubusercontent.com/71690213/139416048-80ff8d26-9d48-433f-8e26-07de28f74ae2.png">
+
 trph=0.0022768/(cos(z))*p/(1-0.00266*cos(2.0 * ϕ) - 0.00028 * H / 1e3))  
-trpw=0.002277 * (1255.0/T  + 0.05)*e/(cos(z))
+trpw=0.002277 * (1255.0/T  + 0.05)*e/(cos(z))<img width="459" alt="Screenshot 2021-10-29 at 4 58 34 PM" src="https://user-images.githubusercontent.com/71690213/139416067-569f1a56-79e4-474d-abf0-21d063c15d13.png">
+
 where p, T and H are pressure, temperature and humidity at height h. 
 where e is the partial water vapor pressure. 
 
