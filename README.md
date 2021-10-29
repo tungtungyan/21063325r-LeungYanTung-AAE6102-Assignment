@@ -18,7 +18,15 @@ t_u=t ̂_u+∆t_u
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set.
 
 Tropospheric correction based on standard atmosphere model is optional. 
-The initial position to start the iteration using [■(-2694685.473@-4293642.366@3857878.924)]  (WGS 84 XYZ, in meters). The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
+The initial position to start the iteration using 
+<br />
+	[ −2694685.473 ] 
+<br />
+	[ −4293642.366 ] 
+<br />
+	[ 3857878 . 924 ] 
+	<br />
+(WGS 84 XYZ, in meters). The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
 
 
 GPS Constants:
