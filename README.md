@@ -43,7 +43,9 @@ Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s positi
 
 First, calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
 Square root of semi-major axis a (Sqrta) was save in the Column 10 of eph.dat. 
-Therefore, the semimajor axis (a) is <img width="128" alt="Screenshot 2021-10-29 at 4 50 39 PM" src="https://user-images.githubusercontent.com/71690213/139407961-a6c07131-4723-4909-a11d-1709382fe2d7.png">
+Therefore, the semimajor axis (a) is 
+	
+<br /><img width="128" alt="Screenshot 2021-10-29 at 4 50 39 PM" src="https://user-images.githubusercontent.com/71690213/139407961-a6c07131-4723-4909-a11d-1709382fe2d7.png">
 
 <br />The corrected mean motion(n):
 <br /><img width="127" alt="Screenshot 2021-10-29 at 4 50 45 PM" src="https://user-images.githubusercontent.com/71690213/139408058-e0d4f313-77b9-4fb8-8db9-efe4133368d0.png">
