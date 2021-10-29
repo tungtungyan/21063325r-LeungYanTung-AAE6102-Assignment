@@ -22,11 +22,9 @@ The initial position to start the iteration using
 <br />
 	
 	[ −2694685.473 ] 
-<br />
-	
+
 	[ −4293642.366 ] 
-<br />
-	
+
 	[ 3857878 . 924 ] 
 <br />
 (WGS 84 XYZ, in meters). The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
