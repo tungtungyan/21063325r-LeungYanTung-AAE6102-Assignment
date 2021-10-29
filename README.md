@@ -65,14 +65,10 @@ Therefore, the semimajor axis (a) is a=〖sqeta〗^2<img width="128" alt="Screen
 
 E_k=E_0-e sin⁡〖E_k 〗<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
 
+However, the coordinates have some rotation error when transformed the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
 
-Calculate the satellite clock offset (t).
+The rotational matrix for coordinate transform correction:
 
-<br />t=t_SV-〖∆t〗_SV
-<br />〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_r
-	<img width="289" alt="Screenshot 2021-10-29 at 4 51 27 PM" src="https://user-images.githubusercontent.com/71690213/139408321-b6fe2752-a780-4a30-a99e-a87148305b09.png">
-
-<br />t_SV: The individual satellite time.
 
 	Determine the broadcast satellite clock error.
 <br />
