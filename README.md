@@ -6,8 +6,8 @@
 
 This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
 
-<p align="center">
 The linearized navigation equation:
+<p align="center">
 Single pseudorange: ρ_i=√((x_i-x_u )^2+(y_i-y_u )^2+(z_i-z_u )^2 )+ct_u
 x_u=x ̂_u+∆x_u
 y_u=y ̂_u+∆y_u
@@ -95,8 +95,11 @@ eph.dat is a 8 x 24 matrix containing the ephemeris data from a GPS receiver. Th
 
 Column	Symbol	Meaning
 Column 1: 	rcvr_tow 	receiver time of week(s)
+		      <br />  
 Column 2:	Svid 	satellite PRN number (1 – 32)
+	 <br />  
 Column 3:	toc  	reference time of clock parameters (s)
+	 <br />  
 Column 4:	toe 	reference time of ephemeris parameters (s)
 Column 5:	af0	clock correction coefficient – group delay (s) 
 Column 6:	af1	clock correction coefficient (s/s)
