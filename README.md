@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h3 align="center">AAE6102 Assignment Leung Yan Tung 21063325r due: Nov 1st, 2021</h3>
+<h3 align="center">AAE6102 Assignment Leung Yan Tung 21063325r due: Nov 1st, 2021</h3>
 
 <p align="center">
 
@@ -60,6 +60,7 @@ t_SV: The individual satellite time.
 
 	Determine the broadcast satellite clock error.
 <br />
+	
 	Estimate the tropospheric delay for each satellite (optional).
 	
 	use the linerized GPS measurement equation developed in class to estimate the vector δxˆ
@@ -84,7 +85,7 @@ rcvr.dat is an 8x7 matrix containing raw ranging information. Each of the 8 rows
 
 Column	Symbol	Meaning
 Column 1: 	rcvr_tow 	receiver time of week(s)
-		     <br />
+	<br />
 Column 2:	Svid 	satellite PRN number (1 – 32)
 	<br />
 Column 3:	pr	pseudorange (m)
@@ -106,7 +107,7 @@ eph.dat is a 8 x 24 matrix containing the ephemeris data from a GPS receiver. Th
 
 Column	Symbol	Meaning
 Column 1: 	rcvr_tow 	receiver time of week(s)
-<br />  
+	<br />  
 Column 2:	Svid 	satellite PRN number (1 – 32)
 	 <br />  
 Column 3:	toc  	reference time of clock parameters (s)
