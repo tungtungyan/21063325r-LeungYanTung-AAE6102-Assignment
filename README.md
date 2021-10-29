@@ -92,19 +92,24 @@ u_k=Φ_k+δu_k
 <img width="290" alt="Screenshot 2021-10-29 at 4 52 06 PM" src="https://user-images.githubusercontent.com/71690213/139410625-c2c9f946-fae7-4943-8b0c-02d8c4fc6571.png">
 
 Corrected radius:
-r_k=a(1-e cos⁡〖E_k 〗)+δr_k
+r_k=a(1-e cos⁡〖E_k 〗)+δr_k<img width="251" alt="Screenshot 2021-10-29 at 4 52 17 PM" src="https://user-images.githubusercontent.com/71690213/139415014-db907346-4e22-4e3c-b205-fb6b818397c7.png">
+
 Corrected Inclination:
-i_k=i_o+δi_k+(IDOT)t_k
+i_k=i_o+δi_k+(IDOT)t_k<img width="243" alt="Screenshot 2021-10-29 at 4 52 24 PM" src="https://user-images.githubusercontent.com/71690213/139415027-27acc67c-78bc-40d2-8b9b-ee019ef1c91d.png">
+
 IDOT in the Column 17 of eph.dat.
 
 Corrected longitude of ascending node:
-Ω_k=Ω_o+(Ω-Ω_e ) t_k-Ω_e t_oe
+Ω_k=Ω_o+(Ω-Ω_e ) t_k-Ω_e t_oe<img width="287" alt="Screenshot 2021-10-29 at 4 52 31 PM" src="https://user-images.githubusercontent.com/71690213/139415057-0bcf22e6-d19a-4354-be26-5ee00f066a82.png">
+
 Position in orbital plane:
 x-coordinate:
-〖x_k〗^'=r_k  cos⁡〖u_k 〗
+〖x_k〗^'=r_k  cos⁡〖u_k 〗<img width="155" alt="Screenshot 2021-10-29 at 4 52 37 PM" src="https://user-images.githubusercontent.com/71690213/139415344-f630aea4-a16f-4805-97e4-d1ec60b12e40.png">
+
 
 y-coordinate:
-〖y_k〗^'=r_k  sin⁡〖u_k 〗
+〖y_k〗^'=r_k  sin⁡〖u_k 〗<img width="140" alt="Screenshot 2021-10-29 at 4 52 45 PM" src="https://user-images.githubusercontent.com/71690213/139415355-617f71d2-a0df-49fb-b9a6-d93ff29dd427.png">
+
 
 Therefor,
 The Earth-fixed coordinates calculate by 
@@ -112,6 +117,7 @@ The Earth-fixed coordinates calculate by
 x_k=〖x_k〗^'  cos⁡〖Ω_k 〗-〖y_k〗^'  cos⁡〖i_k 〗 x sin⁡〖Ω_k 〗
 y_k=〖x_k〗^'  sin⁡〖Ω_k 〗+〖y_k〗^'  cos⁡〖i_k 〗  cos⁡〖Ω_k 〗
 z_k=〖y_k〗^'  sin⁡〖i_k 〗
+<img width="345" alt="Screenshot 2021-10-29 at 4 54 00 PM" src="https://user-images.githubusercontent.com/71690213/139415371-a008871b-474e-4702-b3d0-4c7bf778eb7c.png">
 
 
 However, the coordinates have some rotation error when transformed the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
@@ -120,10 +126,31 @@ The rotational matrix for coordinate transform correction:
 
 
 	Determine the broadcast satellite clock error.
-<br />
+<br />Calculate the satellite clock offset (t).
+
+t=t_SV-〖∆t〗_SV
+〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_(r )
+〖∆t〗_r=F*e*sqeta sin⁡(E_k)
+t_SV: The individual satellite time.
+
 	
 	Estimate the tropospheric delay for each satellite (optional).
-<br />
+<br />First, resolve the tropospheric error of each iteration. 
+Using iterative algorithm to transform the initial position of ECEF coordinates to Geodetic coordinates (ϕ,λ,h).
+ECEF coordinates=[■(-2694685.473@-4293642.366@3857878.924)]
+
+Then, Transform the Geodetic coordinates to east, north, up (ENU) coordinates.
+
+
+Using Saastamoinen model to enale tropospheric error estimation.
+z=π/2-sin^(-1)⁡〖h/(ϕ^2+ λ^2 )^2 〗
+Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
+
+trph=0.0022768/(cos(z))*p/(1-0.00266*cos(2.0 * ϕ) - 0.00028 * H / 1e3))  
+trpw=0.002277 * (1255.0/T  + 0.05)*e/(cos(z))
+where p, T and H are pressure, temperature and humidity at height h. 
+where e is the partial water vapor pressure. 
+
 		
 	use the linerized GPS measurement equation developed in class to estimate the vector δxˆ
 <br />
