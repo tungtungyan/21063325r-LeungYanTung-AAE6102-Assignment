@@ -31,10 +31,10 @@ The initial position to start the iteration using
 
 
 GPS Constants:
-Speed of light: c = 299792458.0 (m/s)
-WGS 84 value of earth’s rotation rate: Wedot= 7.2921151467e-5 (r/s)
-WGS 84 value of earth's universal gravitation constant: mu= 3.986005e+14 (m^3/s^2)
-Relativistic correction term constant: F= -4.442807633e-10
+<br />Speed of light: c = 299792458.0 (m/s)
+<br />WGS 84 value of earth’s rotation rate: Wedot= 7.2921151467e-5 (r/s)
+<br />WGS 84 value of earth's universal gravitation constant: mu= 3.986005e+14 (m^3/s^2)
+<br />Relativistic correction term constant: F= -4.442807633e-10
 
 Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s position at time of week 440992 using the following process.
 
@@ -43,28 +43,26 @@ Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s positi
 
 First, calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
 Square root of semi-major axis a (Sqrta) was save in the Column 10 of eph.dat. 
-Therefore, the semimajor axis (a) is
-
-a=〖sqeta〗^2
-The corrected mean motion(n):
-n=n_0-∆n
-Computed mean motion (n_0)
-n_0=√(mu/a^3 )
-Time from ephemeris epoch (t_k):
-t_k=t-〖∆t〗_oe
-t_oeis reference time of ephemeris parameters (s). 
-Mean anomaly:
-M_k=M_0+nt_k
-Set the maximum number of iterations is 10.
-Then, use Kepler’s equation of eccentric anomaly is solved by iteration.
+Therefore, the semimajor axis (a) is a=〖sqeta〗^2
+<br />The corrected mean motion(n):
+<br />n=n_0-∆n
+<br />Computed mean motion (n_0)
+<br />n_0=√(mu/a^3 )
+<br />Time from ephemeris epoch (t_k):
+<br />t_k=t-〖∆t〗_oe
+<br />t_oeis reference time of ephemeris parameters (s). 
+<br />Mean anomaly:
+<br />M_k=M_0+nt_k
+<br />Set the maximum number of iterations is 10.
+<br />Then, use Kepler’s equation of eccentric anomaly is solved by iteration.
 
 E_k=E_0-e sin⁡〖E_k 〗
 
 Calculate the satellite clock offset (t).
 
-t=t_SV-〖∆t〗_SV
-〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_r
-t_SV: The individual satellite time.
+<br />t=t_SV-〖∆t〗_SV
+<br />〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_r
+<br />t_SV: The individual satellite time.
 
 	Determine the broadcast satellite clock error.
 <br />
