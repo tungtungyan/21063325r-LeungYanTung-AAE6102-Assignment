@@ -49,74 +49,69 @@ Therefore, the semimajor axis (a) is a=〖sqeta〗^2<img width="128" alt="Screen
 <br />n=n_0-∆n<img width="127" alt="Screenshot 2021-10-29 at 4 50 45 PM" src="https://user-images.githubusercontent.com/71690213/139408058-e0d4f313-77b9-4fb8-8db9-efe4133368d0.png">
 
 <br />Computed mean motion (n_0)
-<br />n_0=√(mu/a^3 )<img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408090-f0b05a1b-6199-4a8f-b3de-87be78e7378d.png">
+<br /><img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408090-f0b05a1b-6199-4a8f-b3de-87be78e7378d.png">
 
-<br />n_0=√(mu/a^3 )<img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408228-396bd7d3-b34c-41e5-b73f-be06245e6d24.png">
+<br /><img width="146" alt="Screenshot 2021-10-29 at 4 50 55 PM" src="https://user-images.githubusercontent.com/71690213/139408228-396bd7d3-b34c-41e5-b73f-be06245e6d24.png">
 
 <br />Time from ephemeris epoch (t_k):
-<br />t_k=t-〖∆t〗_oe<img width="135" alt="Screenshot 2021-10-29 at 4 51 02 PM" src="https://user-images.githubusercontent.com/71690213/139408243-021110ba-8c6a-48b9-b6f0-ae97f42bc160.png">
+<br /><img width="135" alt="Screenshot 2021-10-29 at 4 51 02 PM" src="https://user-images.githubusercontent.com/71690213/139408243-021110ba-8c6a-48b9-b6f0-ae97f42bc160.png">
 
 <br />t_oeis reference time of ephemeris parameters (s). 
 <br />Mean anomaly:
-<br />M_k=M_0+nt_k<img width="153" alt="Screenshot 2021-10-29 at 4 51 07 PM" src="https://user-images.githubusercontent.com/71690213/139408255-0fd371b8-f0d8-427d-9f44-58128baf3569.png">
+<br /><img width="153" alt="Screenshot 2021-10-29 at 4 51 07 PM" src="https://user-images.githubusercontent.com/71690213/139408255-0fd371b8-f0d8-427d-9f44-58128baf3569.png">
 
 <br />Set the maximum number of iterations is 10.
 <br />Then, use Kepler’s equation of eccentric anomaly is solved by iteration.
 
-E_k=E_0-e sin⁡〖E_k 〗<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
+<img width="179" alt="Screenshot 2021-10-29 at 4 51 17 PM" src="https://user-images.githubusercontent.com/71690213/139408278-2c561019-8690-4299-8998-1e376c14742b.png">
 Calculate the true anomaly:
-ν_k=tan^(-1)⁡{((√(1-e^2 )  sin⁡〖E_k 〗)/(1-e cos⁡〖E_k 〗 ))/((cos⁡〖E_k 〗-e)/(1-e cos⁡〖E_k 〗 ))}
 <img width="289" alt="Screenshot 2021-10-29 at 4 51 27 PM" src="https://user-images.githubusercontent.com/71690213/139410511-9387819f-9c11-454c-a1c0-7506a31485d2.png">
 
 argument of latitude:
 
-Φ_k=ν_k+ω
 <img width="132" alt="Screenshot 2021-10-29 at 4 51 37 PM" src="https://user-images.githubusercontent.com/71690213/139410530-44e28dc8-b853-4c0f-bbea-2e2b3d708fc5.png">
 
 Use the Second Harmonic Perturb to find to Correction value:
 Argument of latitude Correction:
-δu_k=c_us  sin⁡〖2Φ_k 〗+c_us  cos⁡〖2Φ_k 〗
+
 <img width="306" alt="Screenshot 2021-10-29 at 4 51 47 PM" src="https://user-images.githubusercontent.com/71690213/139410551-83e449c2-f57c-42c2-851d-bdb240e07a27.png">
 
 Radius Correction:
-δr_k=c_rs  sin⁡〖2Φ_k 〗+c_rs  cos⁡〖2Φ_k 〗
+
 <img width="295" alt="Screenshot 2021-10-29 at 4 51 58 PM" src="https://user-images.githubusercontent.com/71690213/139410597-09dc2425-67c4-4b83-afd7-d752548ca7b1.png">
 
 Inclination correction:
-δi_k=c_is  sin⁡〖2Φ_k 〗+c_is  cos⁡〖2Φ_k 〗
+
 <img width="290" alt="Screenshot 2021-10-29 at 4 52 06 PM" src="https://user-images.githubusercontent.com/71690213/139410605-1b29fd4d-be7a-420a-8fec-e7c02a81cac9.png">
 
 Use the Correction value for Corrected:
 Corrected argument of latitude:
-u_k=Φ_k+δu_k
+
 <img width="290" alt="Screenshot 2021-10-29 at 4 52 06 PM" src="https://user-images.githubusercontent.com/71690213/139410625-c2c9f946-fae7-4943-8b0c-02d8c4fc6571.png">
 
 Corrected radius:
-r_k=a(1-e cos⁡〖E_k 〗)+δr_k<img width="251" alt="Screenshot 2021-10-29 at 4 52 17 PM" src="https://user-images.githubusercontent.com/71690213/139415014-db907346-4e22-4e3c-b205-fb6b818397c7.png">
+<img width="251" alt="Screenshot 2021-10-29 at 4 52 17 PM" src="https://user-images.githubusercontent.com/71690213/139415014-db907346-4e22-4e3c-b205-fb6b818397c7.png">
 
 Corrected Inclination:
-i_k=i_o+δi_k+(IDOT)t_k<img width="243" alt="Screenshot 2021-10-29 at 4 52 24 PM" src="https://user-images.githubusercontent.com/71690213/139415027-27acc67c-78bc-40d2-8b9b-ee019ef1c91d.png">
+<img width="243" alt="Screenshot 2021-10-29 at 4 52 24 PM" src="https://user-images.githubusercontent.com/71690213/139415027-27acc67c-78bc-40d2-8b9b-ee019ef1c91d.png">
 
 IDOT in the Column 17 of eph.dat.
 
 Corrected longitude of ascending node:
-Ω_k=Ω_o+(Ω-Ω_e ) t_k-Ω_e t_oe<img width="287" alt="Screenshot 2021-10-29 at 4 52 31 PM" src="https://user-images.githubusercontent.com/71690213/139415057-0bcf22e6-d19a-4354-be26-5ee00f066a82.png">
+<img width="287" alt="Screenshot 2021-10-29 at 4 52 31 PM" src="https://user-images.githubusercontent.com/71690213/139415057-0bcf22e6-d19a-4354-be26-5ee00f066a82.png">
 
 Position in orbital plane:
 x-coordinate:
-〖x_k〗^'=r_k  cos⁡〖u_k 〗<img width="155" alt="Screenshot 2021-10-29 at 4 52 37 PM" src="https://user-images.githubusercontent.com/71690213/139415344-f630aea4-a16f-4805-97e4-d1ec60b12e40.png">
+<img width="155" alt="Screenshot 2021-10-29 at 4 52 37 PM" src="https://user-images.githubusercontent.com/71690213/139415344-f630aea4-a16f-4805-97e4-d1ec60b12e40.png">
 
 
 y-coordinate:
-〖y_k〗^'=r_k  sin⁡〖u_k 〗<img width="140" alt="Screenshot 2021-10-29 at 4 52 45 PM" src="https://user-images.githubusercontent.com/71690213/139415355-617f71d2-a0df-49fb-b9a6-d93ff29dd427.png">
+<img width="140" alt="Screenshot 2021-10-29 at 4 52 45 PM" src="https://user-images.githubusercontent.com/71690213/139415355-617f71d2-a0df-49fb-b9a6-d93ff29dd427.png">
 
 
 Therefor,
 The Earth-fixed coordinates calculate by 
 
-x_k=〖x_k〗^'  cos⁡〖Ω_k 〗-〖y_k〗^'  cos⁡〖i_k 〗 x sin⁡〖Ω_k 〗
-y_k=〖x_k〗^'  sin⁡〖Ω_k 〗+〖y_k〗^'  cos⁡〖i_k 〗  cos⁡〖Ω_k 〗
-z_k=〖y_k〗^'  sin⁡〖i_k 〗
 <img width="345" alt="Screenshot 2021-10-29 at 4 54 00 PM" src="https://user-images.githubusercontent.com/71690213/139415371-a008871b-474e-4702-b3d0-4c7bf778eb7c.png">
 
 
@@ -128,10 +123,7 @@ The rotational matrix for coordinate transform correction:
 	Determine the broadcast satellite clock error.
 <br />Calculate the satellite clock offset (t).
 
-t=t_SV-〖∆t〗_SV
-〖∆t〗_SV=a_0+a_1 (t-t_0c )+a_2 (t-t_0c )^2+〖∆t〗_(r )
-〖∆t〗_r=F*e*sqeta sin⁡(E_k)
-	<img width="452" alt="Screenshot 2021-10-29 at 4 55 01 PM" src="https://user-images.githubusercontent.com/71690213/139415999-7a3c8b68-b4ef-43bc-bac2-5f1e7881669c.png">
+<img width="452" alt="Screenshot 2021-10-29 at 4 55 01 PM" src="https://user-images.githubusercontent.com/71690213/139415999-7a3c8b68-b4ef-43bc-bac2-5f1e7881669c.png">
 
 t_SV: The individual satellite time.
 
@@ -139,21 +131,20 @@ t_SV: The individual satellite time.
 	Estimate the tropospheric delay for each satellite (optional).
 <br />First, resolve the tropospheric error of each iteration. 
 Using iterative algorithm to transform the initial position of ECEF coordinates to Geodetic coordinates (ϕ,λ,h).
-ECEF coordinates=[■(-2694685.473@-4293642.366@3857878.924)]
+ECEF coordinates=
 <img width="169" alt="Screenshot 2021-10-29 at 4 57 13 PM" src="https://user-images.githubusercontent.com/71690213/139416027-c2b1ea05-8dd0-4024-b263-4050cb7e06a0.png">
 
 Then, Transform the Geodetic coordinates to east, north, up (ENU) coordinates.
 
 
 Using Saastamoinen model to enale tropospheric error estimation.
-z=π/2-sin^(-1)⁡〖h/(ϕ^2+ λ^2 )^2 〗<img width="261" alt="Screenshot 2021-10-29 at 4 57 35 PM" src="https://user-images.githubusercontent.com/71690213/139416037-0ec706c5-c046-456f-9a2e-62625d2e020a.png">
+<img width="261" alt="Screenshot 2021-10-29 at 4 57 35 PM" src="https://user-images.githubusercontent.com/71690213/139416037-0ec706c5-c046-456f-9a2e-62625d2e020a.png">
 
 Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
 
-trph=0.0022768/(cos(z))*p/(1-0.00266*cos(2.0 * ϕ) - 0.00028 * H / 1e3))  <img width="688" alt="Screenshot 2021-10-29 at 4 58 12 PM" src="https://user-images.githubusercontent.com/71690213/139416048-80ff8d26-9d48-433f-8e26-07de28f74ae2.png">
+<img width="688" alt="Screenshot 2021-10-29 at 4 58 12 PM" src="https://user-images.githubusercontent.com/71690213/139416048-80ff8d26-9d48-433f-8e26-07de28f74ae2.png">
 
-trph=0.0022768/(cos(z))*p/(1-0.00266*cos(2.0 * ϕ) - 0.00028 * H / 1e3))  
-trpw=0.002277 * (1255.0/T  + 0.05)*e/(cos(z))<img width="459" alt="Screenshot 2021-10-29 at 4 58 34 PM" src="https://user-images.githubusercontent.com/71690213/139416067-569f1a56-79e4-474d-abf0-21d063c15d13.png">
+<img width="459" alt="Screenshot 2021-10-29 at 4 58 34 PM" src="https://user-images.githubusercontent.com/71690213/139416067-569f1a56-79e4-474d-abf0-21d063c15d13.png">
 
 where p, T and H are pressure, temperature and humidity at height h. 
 where e is the partial water vapor pressure. 
