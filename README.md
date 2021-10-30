@@ -1,6 +1,6 @@
 <p align="center">
 
-<h3 align="center">AAE6102 Assignment <br />Leung Yan Tung 21063325r <br /> due: Nov 1st, 2021</h3>
+<h3 align="center">AAE6102 Assignment <br />Leung Yan Tung 21063325r <br /> </h3>
 
 <p align="center">
 
