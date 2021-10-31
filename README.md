@@ -21,7 +21,7 @@
       <a href="#Data-file">Data file</a>
     </li>  
      <li>
-      <a href="#Calculation-of-processing">Calculation of processing</a>
+      <a href="#Calculation-processing">Calculation processing</a>
     </li>
      <li>
       <a href="#Result">Result</a>
@@ -86,8 +86,8 @@ Pressure: 		  Pr = 1013.25(mbar)
 <a href="Data/"><strong>Data</strong></a> - <a href="README.md"><strong>Data File Format</strong></a>
 </details> 
 
-<!-- Calculation of processing -->
-# Calculation of processing
+<!-- Calculation processing -->
+# Calculation processing
 <details open="open">
 Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
 
