@@ -80,7 +80,7 @@ Pressure: 		  Pr = 1013.25(mbar)
 <!--Data file-->
 # Data file
 <details open="open">
-<a href="Data/"><strong>Data</strong></a>
+<a href="Data/"><strong>Data</strong></a> - <a href="README.md"><strong>Data File Format</strong></a>
 </details> 
 
 <!-- Calculation of processing -->
