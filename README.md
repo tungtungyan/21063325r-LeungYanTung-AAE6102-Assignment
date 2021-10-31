@@ -29,6 +29,13 @@ The required corrections for the satellite clock bias and relativity are referre
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 </details>
 
+# Quick Start Guide	
+<details open="open">
+1. Download the main file
+2. Open the main_code file in MATLAB
+3. Press the RUN button
+</details>	
+	
 # Constants
 <details open="open">
 	
