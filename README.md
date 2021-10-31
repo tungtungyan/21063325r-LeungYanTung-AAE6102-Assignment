@@ -274,7 +274,7 @@ the offset and a is a function of the elevation angles.
 <p align="center">	
 </details>
 
-## 5. Update the estimate of the user position: X0 (new)= X0 (old)+δxˆ
+## 5. Update the estimate of the user position: 
 <details open="open">
 	<br />
 Update the position of ECEF and receiver clock offset:
@@ -283,7 +283,7 @@ Update the position of ECEF and receiver clock offset:
 <p align="center">
 </details>
 
-## 6. If δxˆ <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
+## 6. If ∆x <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
 <details open="open">
 <img width="600" alt="Screenshot 2021-10-31 at 12 14 21 PM" src="https://user-images.githubusercontent.com/71690213/139567331-06fa64db-ecf0-4388-a269-a5d51fcdeed6.png">
 </details>
