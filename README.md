@@ -38,7 +38,7 @@ The algorithm uses zero clock bias for Initialize. Terminate the iteration when 
 <br />Temperature: 		  Tr = 291.15(K)
 <br />Temperature at sea-level: temp_0 = 15
 
-#Calculation of processing
+# Calculation of processing
 
 Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
 
