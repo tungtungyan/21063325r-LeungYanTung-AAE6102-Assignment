@@ -4,9 +4,10 @@
 
 <p align="center">
 
-<details open="open">
+
 <!-- Introdution -->
 # Introdution
+<details open="open">
 This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
 
 	
@@ -24,8 +25,9 @@ The required corrections for the satellite clock bias and relativity are referre
 	[ −4293642.366 ] 
 	[ 3857878 .924 ] 
 <br />
+	
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
-
+</details>
 
 # Constants
 ## GPS Constants:
