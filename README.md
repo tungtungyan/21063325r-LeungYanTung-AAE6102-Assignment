@@ -18,22 +18,26 @@ The required corrections for the satellite clock bias and relativity are referre
 
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set. This report will consider the tropospheric correction based on standard atmosphere model. 
 
-![image](https://user-images.githubusercontent.com/71690213/139564787-5f79a815-edbc-47bc-8e0f-fd5173f4bf7e.png)
-
-<br />
-	
+<br />	
 	[ −2694685.473 ] 
 	[ −4293642.366 ] , (WGS 84 XYZ, in meters)
 	[ 3857878 .924 ] 
 <br />
-The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
+The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 
 
-GPS Constants:
-<br />Speed of light: c = 299792458.0 (m/s)
-<br />WGS 84 value of earth’s rotation rate: Wedot= 7.2921151467e-5 (r/s)
+## Constants
+# GPS Constants:
+<br />Speed of light:                                         c = 299792458.0 (m/s)
+<br />WGS 84 value of earth’s rotation rate:                  Wedot= 7.2921151467e-5 (r/s)
 <br />WGS 84 value of earth's universal gravitation constant: mu= 3.986005e+14 (m^3/s^2)
-<br />Relativistic correction term constant: F= -4.442807633e-10
+<br />Relativistic correction term constant:                  F= -4.442807633e-10
+
+# Tropospheric constant:
+<br />Pressure: 		  Pr = 1013.25(mbar)
+<br />Temperature: 		  Tr = 291.15(K)
+<br />Temperature at sea-level: temp_0 = 15
+
 
 Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s position at time of week 440992 using the following process.
 
