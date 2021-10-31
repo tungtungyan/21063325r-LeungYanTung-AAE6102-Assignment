@@ -4,8 +4,11 @@
 
 <p align="center">
 
+<!-- Introdution -->
+##Introdution
 This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
 
+	
 The linearized navigation equation:
 <p align="center">
 Single pseudorange: ρ_i=√((x_i-x_u )^2+(y_i-y_u )^2+(z_i-z_u )^2 )+ct_u
