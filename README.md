@@ -5,7 +5,7 @@
 <p align="center">
 
 <!-- Introdution -->
-**##Introdution**
+## Introdution
 This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
 
 	
