@@ -242,25 +242,41 @@ Update the position of ECEF and receiver clock offset:
 
 ## 6. If δxˆ <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
 <details open="open">
-<img width="529" alt="Screenshot 2021-10-31 at 12 14 21 PM" src="https://user-images.githubusercontent.com/71690213/139567331-06fa64db-ecf0-4388-a269-a5d51fcdeed6.png">
+<img width="600" alt="Screenshot 2021-10-31 at 12 14 21 PM" src="https://user-images.githubusercontent.com/71690213/139567331-06fa64db-ecf0-4388-a269-a5d51fcdeed6.png">
 </details>
 </details>
+
 # Result
+
 <details open="open">
 <br />This report uses MATLAB as a tool to calculate all the process. Below shows all the result of the process. 
 
-<br />	
-:Iterations number:| :Intital position:                                                                              ||:Total position error:|
- ----------------- | :ECEF:                                   || :WGS84 LLA:                                         || ---------------------|
- ----------------- | :X(m):       ||:Y(m):      ||:Z(m):      ||:Latitude (degree):|:Longityde (degree):|:Altitude(m):|:(m):                 |
-          :0:      |:-2694685.473:|:-4293642.366:|:3857878.924:|:37.458376433:     |:122.112338996:     |:31.456:     |:6374.466:            |
+<br />It show that the initial position in Latitude, Longitude, Altitude coordinates system (LLA) and Earth-centered, Earth-fixed coordinates system (ECEF).
 <br />
+<img width="500" alt="Screenshot 2021-10-31 at 12 39 56 PM" src="https://user-images.githubusercontent.com/71690213/139568012-e74cdfec-d44e-4f68-9a1e-63a6539f4c34.png">
+<br />
+	
+The following table show that the result of all the iterations result.
 
+<p align="center">	
+<img width="718" alt="Screenshot 2021-10-31 at 12 43 11 PM" src="https://user-images.githubusercontent.com/71690213/139568095-b5c4c0a5-42f7-4549-8ebf-87ca9d911f2f.png">
+<p align="center">
+
+To summarize, 
+The initial position of ECEF is X= -2694685.4730(m), Y=-4293642.3660(m) and Z=3857878.9240(m). 
+The final position of ECEF is X= -2700369.8496(m), Y= -4292569.1647(m) and Z= 3855264.5930(m). 
+The target position of ECEF is X= -2700400.0000(m), Y=-4292560.0000(m) and Z=3855270.0000(m).
+
+The final position error is 31.9730(m). 
+
+As the time of the week of this report is 440992 which is the time that receiver thinks. However, it has a different error between the true time and the time that receiver thinks such as tropospheric error, satellite clock error, and rotation error which this report has mentioned. The previous result finds that the estimate of the user clock bias b is 0.0017327(s), 519449.6336(m). Therefore, the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds. However, this report has some of the errors that did not mentioned. Therefore, the result still has a 0.0000127 (s) error.
 
 </details> 
  
 
-Appendix A
+# Data file
+<details open="open">
 		     <br />
 <strong>[eph.dat](https://github.com/tungtungyan/21063325r-LeungYanTung-AAE6102-Assignment/blob/main/eph.dat)</strong>
 <strong>[rcvr.dat](https://github.com/tungtungyan/21063325r-LeungYanTung-AAE6102-Assignment/blob/main/rcvr.dat)</strong>
+</details> 
