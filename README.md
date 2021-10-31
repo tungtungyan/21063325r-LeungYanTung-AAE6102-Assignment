@@ -4,6 +4,24 @@
 
 <p align="center">
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#Introdution">Introdution</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+    <li>
+      <a href="#student-tasks">Student Tasks</a>
+    </li>
+    <li>
+      <a href="#acknowledgements">Acknowledgements</a>
+    </li>    
+  </ol>
+</details>	
 
 <!-- Introdution -->
 # Introdution
@@ -29,13 +47,15 @@ The required corrections for the satellite clock bias and relativity are referre
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 </details>
 
+<!-- Quick Start Guide-->
 # Quick Start Guide	
 <details open="open">
 <br />1. Download the main file
-<br />2. Open the main_code file in MATLAB
+<br />2. Open the main_code.m file in MATLAB
 <br />3. Press the RUN button
 </details>	
-	
+
+<!-- Constants-->	
 # Constants
 <details open="open">
 	
@@ -50,7 +70,14 @@ Pressure: 		  Pr = 1013.25(mbar)
 <br />Temperature: 		  Tr = 291.15(K)
 <br />Temperature at sea-level: temp_0 = 15
 </details>
-	
+
+<!--Data file-->
+# Data file
+<details open="open">
+<a href="Data/"><strong>Data</strong></a>
+</details> 
+
+<!-- Calculation of processing-->
 # Calculation of processing
 <details open="open">
 Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
@@ -253,6 +280,7 @@ Update the position of ECEF and receiver clock offset:
 </details>
 </details>
 
+<!--Result-->
 # Result
 
 <details open="open">
@@ -280,8 +308,3 @@ As the time of the week of this report is 440992 which is the time that receiver
 
 </details> 
  
-
-# Data file
-<details open="open">
-<a href="Data/"><strong>Data</strong></a>
-</details> 
