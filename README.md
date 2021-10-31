@@ -31,9 +31,9 @@ The algorithm uses zero clock bias for Initialize. Terminate the iteration when 
 
 # Quick Start Guide	
 <details open="open">
-1. Download the main file
-2. Open the main_code file in MATLAB
-3. Press the RUN button
+<br />1. Download the main file
+<br />2. Open the main_code file in MATLAB
+<br />3. Press the RUN button
 </details>	
 	
 # Constants
