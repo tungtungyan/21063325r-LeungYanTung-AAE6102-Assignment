@@ -20,7 +20,7 @@ The required corrections for the satellite clock bias and relativity are referre
 
 <br />	
 	[ −2694685.473 ] 
-	[ −4293642.366 ] , (WGS 84 XYZ, in meters)
+	[ −4293642.366 ]  (WGS 84 XYZ, in meters)
 	[ 3857878 .924 ] 
 <br />
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
