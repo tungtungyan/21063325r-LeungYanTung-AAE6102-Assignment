@@ -53,7 +53,7 @@ The required corrections for the satellite clock bias and relativity are referre
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 </details>
 
-<!-- Quick Start Guide-->
+<!-- Quick Start Guide -->
 # Quick Start Guide	
 <details open="open">
 <br />1. Download the main file
@@ -61,7 +61,7 @@ The algorithm uses zero clock bias for Initialize. Terminate the iteration when 
 <br />3. Press the RUN button
 </details>	
 
-<!-- Constants-->	
+<!-- Constants -->	
 # Constants
 <details open="open">
 	
@@ -83,7 +83,7 @@ Pressure: 		  Pr = 1013.25(mbar)
 <a href="Data/"><strong>Data</strong></a>
 </details> 
 
-<!-- Calculation of processing-->
+<!-- Calculation of processing -->
 # Calculation of processing
 <details open="open">
 Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
