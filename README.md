@@ -13,7 +13,7 @@ This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the l
 	
 The linearized navigation equation:
 <p align="center">
-<img width="473" alt="Screenshot 2021-10-31 at 10 42 10 AM" src="https://user-images.githubusercontent.com/71690213/139564718-86bf7ebf-0037-4fae-8ddd-c58975619690.png">
+<img width="466" alt="Screenshot 2021-10-31 at 12 15 33 PM" src="https://user-images.githubusercontent.com/71690213/139567359-522722a3-fda3-4ef6-ae42-bdb1fc259944.png">
 <p align="center">
 
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set.
@@ -125,19 +125,17 @@ Corrected argument of latitude:
 <p align="center"><img width="124" alt="Screenshot 2021-10-31 at 11 27 57 AM" src="https://user-images.githubusercontent.com/71690213/139566032-fba07064-13a9-435c-8a21-fb8fee5a09f8.png">
 <p align="center">
 
-
 <br />Corrected radius:
-<br />
-<p align="center"><img width="251" alt="Screenshot 2021-10-29 at 4 52 17 PM" src="https://user-images.githubusercontent.com/71690213/139415014-db907346-4e22-4e3c-b205-fb6b818397c7.png">
+<p align="center">
+<img width="251" alt="Screenshot 2021-10-29 at 4 52 17 PM" src="https://user-images.githubusercontent.com/71690213/139415014-db907346-4e22-4e3c-b205-fb6b818397c7.png">
 <p align="center">
 
-<br />
-Corrected Inclination:
-<p align="center">
+<br />Corrected Inclination:
+<p align="center">	
 <img width="243" alt="Screenshot 2021-10-29 at 4 52 24 PM" src="https://user-images.githubusercontent.com/71690213/139415027-27acc67c-78bc-40d2-8b9b-ee019ef1c91d.png">
 <p align="center">
-<br /> 
-Where IDOT in the Column 17 of eph.dat.
+
+<br />Where IDOT in the Column 17 of eph.dat.
 
 <br />Corrected longitude of ascending node:
 <p align="center">
@@ -148,63 +146,117 @@ Where IDOT in the Column 17 of eph.dat.
 <br />x-coordinate:
 <p align="center"><img width="155" alt="Screenshot 2021-10-29 at 4 52 37 PM" src="https://user-images.githubusercontent.com/71690213/139415344-f630aea4-a16f-4805-97e4-d1ec60b12e40.png">
 <p align="center">
+
 <br />y-coordinate:
-<img width="140" alt="Screenshot 2021-10-29 at 4 52 45 PM" src="https://user-images.githubusercontent.com/71690213/139415355-617f71d2-a0df-49fb-b9a6-d93ff29dd427.png">
+<p align="center"><img width="140" alt="Screenshot 2021-10-29 at 4 52 45 PM" src="https://user-images.githubusercontent.com/71690213/139415355-617f71d2-a0df-49fb-b9a6-d93ff29dd427.png">
+<p align="center">
 
+Therefore, the Earth-fixed coordinates calculate by 
 
-Therefor,
-The Earth-fixed coordinates calculate by 
-
-<img width="345" alt="Screenshot 2021-10-29 at 4 54 00 PM" src="https://user-images.githubusercontent.com/71690213/139415371-a008871b-474e-4702-b3d0-4c7bf778eb7c.png">
-
+<p align="center"><img width="345" alt="Screenshot 2021-10-29 at 4 54 00 PM" src="https://user-images.githubusercontent.com/71690213/139415371-a008871b-474e-4702-b3d0-4c7bf778eb7c.png">
+<p align="center">
 
 However, the coordinates have some rotation error when transformed the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
 
 The rotational matrix for coordinate transform correction:
+<p align="center"><img width="275" alt="Screenshot 2021-10-31 at 11 51 26 AM" src="https://user-images.githubusercontent.com/71690213/139566675-19e5d965-7424-4141-b00f-3bbbeeaffc70.png">
+<p align="center">
 </details>
 
-	Determine the broadcast satellite clock error.
+## 2. Determine the broadcast satellite clock error.
+<details open="open">
 <br />Calculate the satellite clock offset (t).
 
-<img width="452" alt="Screenshot 2021-10-29 at 4 55 01 PM" src="https://user-images.githubusercontent.com/71690213/139415999-7a3c8b68-b4ef-43bc-bac2-5f1e7881669c.png">
+<p align="center"><img width="452" alt="Screenshot 2021-10-29 at 4 55 01 PM" src="https://user-images.githubusercontent.com/71690213/139415999-7a3c8b68-b4ef-43bc-bac2-5f1e7881669c.png">
+<p align="center">
 
-t_SV: The individual satellite time.
+<br /><img width="337" alt="Screenshot 2021-10-31 at 11 58 29 AM" src="https://user-images.githubusercontent.com/71690213/139566885-d19bdf5a-e688-4c17-9c5d-e38b635edea7.png">
 
 	
-###### Estimate the tropospheric delay for each satellite (optional).
+</details>
+	
+## 3. Estimate the tropospheric delay for each satellite (optional).
+<details open="open">
 <br />First, resolve the tropospheric error of each iteration. 
+
 Using iterative algorithm to transform the initial position of ECEF coordinates to Geodetic coordinates (ϕ,λ,h).
+
+<p align="center">
 ECEF coordinates=
-<img width="169" alt="Screenshot 2021-10-29 at 4 57 13 PM" src="https://user-images.githubusercontent.com/71690213/139416027-c2b1ea05-8dd0-4024-b263-4050cb7e06a0.png">
-
-Then, Transform the Geodetic coordinates to east, north, up (ENU) coordinates.
-
-
-Using Saastamoinen model to enale tropospheric error estimation.
+<br /> <img width="169" alt="Screenshot 2021-10-29 at 4 57 13 PM" src="https://user-images.githubusercontent.com/71690213/139416027-c2b1ea05-8dd0-4024-b263-4050cb7e06a0.png">
+<p align="center">
+	
+<br />Then, Transform the Geodetic coordinates to east, north, up (ENU) coordinates.
+Using Saastamoinen model to enable tropospheric error estimation.
+<p align="center">
 <img width="261" alt="Screenshot 2021-10-29 at 4 57 35 PM" src="https://user-images.githubusercontent.com/71690213/139416037-0ec706c5-c046-456f-9a2e-62625d2e020a.png">
+<p align="center">
 
-Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
-
+<br />Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
+<p align="center">
 <img width="688" alt="Screenshot 2021-10-29 at 4 58 12 PM" src="https://user-images.githubusercontent.com/71690213/139416048-80ff8d26-9d48-433f-8e26-07de28f74ae2.png">
 
 <img width="459" alt="Screenshot 2021-10-29 at 4 58 34 PM" src="https://user-images.githubusercontent.com/71690213/139416067-569f1a56-79e4-474d-abf0-21d063c15d13.png">
+<p align="center">
 
 where p, T and H are pressure, temperature and humidity at height h. 
-where e is the partial water vapor pressure. 
+<br />where e is the partial water vapor pressure.
 
+</details>
 		
-	use the linerized GPS measurement equation developed in class to estimate the vector δxˆ
+## 4. Use the linerized GPS measurement equation developed in class to estimate the vector∆x
+<details open="open">
 <br />
-		
-	update the estimate of the user position: X0 (new)= X0 (old)+δxˆ
+The geometric range (ρ):
+<p align="center"><img width="337" alt="Screenshot 2021-10-31 at 12 04 35 PM" src="https://user-images.githubusercontent.com/71690213/139567048-82deac31-8375-471b-b673-724db556bfdb.png">
+<p align="center">
+	
+<br />Where i is the number of satellites.
+	
+Approx pseudorange (p):
+<p align="center">
+<img width="328" alt="Screenshot 2021-10-31 at 12 06 11 PM" src="https://user-images.githubusercontent.com/71690213/139567088-4a00af43-742f-4502-bbc9-052a5f8c140f.png">
+<p align="center">
+	
+Using least squares method to position:
+<p align="center">
+<img width="378" alt="Screenshot 2021-10-31 at 12 10 46 PM" src="https://user-images.githubusercontent.com/71690213/139567256-ec24de33-8729-4cda-ba54-fcaa924e76de.png">
+<p align="center">
+
+Where pr is the pseudorange in the Column 3 of rcvr.dat, <img width="69" alt="Screenshot 2021-10-31 at 12 08 50 PM" src="https://user-images.githubusercontent.com/71690213/139567158-ba9c6fbb-b18c-4432-8e0b-3c75519a9084.png"> is the approx position, <img width="18" alt="Screenshot 2021-10-31 at 12 09 21 PM" src="https://user-images.githubusercontent.com/71690213/139567185-77c6fcd2-38eb-4d24-a141-e13204d5e72e.png">
+the offset and a is a function of the elevation angles.
+
+<p align="center">
+<img width="219" alt="Screenshot 2021-10-31 at 12 08 06 PM" src="https://user-images.githubusercontent.com/71690213/139567127-e79c0255-44e1-4747-90bb-f3c3e25d2990.png">
+<p align="center">	
+</details>
+
+## 5. Update the estimate of the user position: X0 (new)= X0 (old)+δxˆ
+<details open="open">
+	<br />
+Update the position of ECEF and receiver clock offset:
+<p align="center">
+<img width="241" alt="Screenshot 2021-10-31 at 12 12 24 PM" src="https://user-images.githubusercontent.com/71690213/139567296-3c6e89f6-959e-4be0-a702-5706781829bd.png">
+<p align="center">
+</details>
+
+## 6. If δxˆ <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
+<details open="open">
+<img width="529" alt="Screenshot 2021-10-31 at 12 14 21 PM" src="https://user-images.githubusercontent.com/71690213/139567331-06fa64db-ecf0-4388-a269-a5d51fcdeed6.png">
+</details>
+</details>
+# Result
+<details open="open">
+<br />This report uses MATLAB as a tool to calculate all the process. Below shows all the result of the process. 
+
+<br />	
+:Iterations number:| :Intital position:                                                                              ||:Total position error:|
+ ----------------- | :ECEF:                                   || :WGS84 LLA:                                         || ---------------------|
+ ----------------- | :X(m):       ||:Y(m):      ||:Z(m):      ||:Latitude (degree):|:Longityde (degree):|:Altitude(m):|:(m):                 |
+          :0:      |:-2694685.473:|:-4293642.366:|:3857878.924:|:37.458376433:     |:122.112338996:     |:31.456:     |:6374.466:            |
 <br />
-		
-	if δxˆ <10−4 m, then we have successfully converged on a valid position solution (Some of the MATLAB functions in the folder will be useful in solving this problem.)
 
 
-What is your estimate of the user clock bias b? Does your estimate of the user clock bias in seconds offer insight as to why the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds? (Hints: Your initial iteration should give (in meters) δx ≈ -5710, δy ≈ 1080, δz ≈ -2610, δb ≈ 519450. Your position estimate (WGS 84
-−2700400
-XYZ coordinates, in meters) should be x ≈ [■(-2700400@-4292560@3857878.924)]   ) 385527
 </details> 
  
 
