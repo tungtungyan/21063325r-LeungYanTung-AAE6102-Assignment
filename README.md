@@ -313,7 +313,7 @@ To summarize,
 
 <br />The final position error is 31.9730(m). 
 
-<br />As the time of the week of this report is 440992 which is the time that receiver thinks. However, it has a different error between the true time and the time that receiver thinks such as tropospheric error, satellite clock error, and rotation error which this report has mentioned. The previous result finds that the estimate of the user clock bias b is 0.0017327(s), 519449.6336(m). Therefore, the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds. However, this report has some of the errors that did not mentioned. Therefore, the result still has a 0.0000127 (s) error.
+<br />As the time of the week of this report is 440992 which is the time that receiver thinks. However, it has a different error between the true time and the time that receiver thinks such as tropospheric error, satellite clock error, and rotation error which this report has mentioned. The previous result finds that the estimate of the user clock bias b is 0.0017327(s), 519449.6336(m). Therefore, the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds. However, this report has some of the errors that did not mention. Therefore, the result still has a 0.0000127 (s) error.
 
 </details> 
  
