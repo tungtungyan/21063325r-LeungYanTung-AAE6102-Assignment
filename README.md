@@ -20,11 +20,11 @@ The required corrections for the satellite clock bias and relativity are referre
 
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set. This report will consider the tropospheric correction based on standard atmosphere model. 
 
-<br />	
+
 	[ −2694685.473 ] 
 	[ −4293642.366 ] 
 	[ 3857878 .924 ] 
-<br />
+
 	
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 </details>
