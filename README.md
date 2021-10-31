@@ -12,16 +12,16 @@
       <a href="#Introdution">Introdution</a>
     </li>
     <li>
-      <a href="#Quick Start Guide">Quick Start Guide</a>
+      <a href="#Quick-Start-Guide">Quick Start Guide</a>
     </li>
     <li>
       <a href="#Constants">Constants</a>
     </li>
     <li>
-      <a href="#Data file">Data file</a>
+      <a href="#Data-file">Data file</a>
     </li>  
      <li>
-      <a href="#Calculation of processing">Calculation of processing</a>
+      <a href="#Calculation-of-processing">Calculation of processing</a>
     </li>
      <li>
       <a href="#Result">Result</a>
