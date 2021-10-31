@@ -58,7 +58,10 @@ The algorithm uses zero clock bias for Initialize. Terminate the iteration when 
 <details open="open">
 <br />1. Download the main file
 <br />2. Open the main_code.m file in MATLAB
-<br />3. Press the RUN button
+<br />3. Press the "RUN" button
+
+You can see the result in the command window!:clap::clap::clap:
+	
 </details>	
 
 <!-- Constants -->	
