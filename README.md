@@ -12,14 +12,20 @@
       <a href="#Introdution">Introdution</a>
     </li>
     <li>
-      <a href="#contact">Contact</a>
+      <a href="#Quick Start Guide">Quick Start Guide</a>
     </li>
     <li>
-      <a href="#student-tasks">Student Tasks</a>
+      <a href="#Constants">Constants</a>
     </li>
     <li>
-      <a href="#acknowledgements">Acknowledgements</a>
-    </li>    
+      <a href="#Data file">Data file</a>
+    </li>  
+     <li>
+      <a href="#Calculation of processing">Calculation of processing</a>
+    </li>
+     <li>
+      <a href="#Result">Result</a>
+    </li>
   </ol>
 </details>	
 
