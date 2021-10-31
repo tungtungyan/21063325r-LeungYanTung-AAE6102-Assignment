@@ -11,11 +11,7 @@ This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the l
 	
 The linearized navigation equation:
 <p align="center">
-Single pseudorange: ρ_i=√((x_i-x_u )^2+(y_i-y_u )^2+(z_i-z_u )^2 )+ct_u
-x_u=x ̂_u+∆x_u
-y_u=y ̂_u+∆y_u
-z_u=z ̂_u+∆z_u
-t_u=t ̂_u+∆t_u
+<img width="473" alt="Screenshot 2021-10-31 at 10 42 10 AM" src="https://user-images.githubusercontent.com/71690213/139564718-86bf7ebf-0037-4fae-8ddd-c58975619690.png">
 <p align="center">
 
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set.
