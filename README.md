@@ -32,7 +32,7 @@
 <!-- Introdution -->
 # Introdution
 <details open="open">
-This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
+This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A shows the data file format of rcvr.dat and eph.dat.
 
 	
 The linearized navigation equation:
@@ -40,10 +40,10 @@ The linearized navigation equation:
 <img width="466" alt="Screenshot 2021-10-31 at 12 15 33 PM" src="https://user-images.githubusercontent.com/71690213/139567359-522722a3-fda3-4ef6-ae42-bdb1fc259944.png">
 <p align="center">
 
-The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set.
 
-The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set. This report will consider the tropospheric correction based on standard atmosphere model. 
+The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set. This report will consider the tropospheric correction based on the standard atmosphere model. 
 
+The initial position to start the iteration using
 
 	[ −2694685.473 ] 
 	[ −4293642.366 ]   (WGS 84 XYZ, in meters)
@@ -89,14 +89,14 @@ Pressure: 		  Pr = 1013.25(mbar)
 <!-- Calculation processing -->
 # Calculation processing
 <details open="open">
-Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
+Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at the time of week 440992 using the following process.
 
-## 1. Calculate the XYZ positions for all valid satellite at time 440992.
+## 1. Calculate the XYZ positions for all valid satellites at time 440992.
 
 <details open="open">
 Calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
 <br />
-Square root of semi-major axis a (Sqrta) was saved in the Column 10 of eph.dat.
+The square root of semi-major axis a (Sqrta) was saved in Column 10 of eph.dat.
 <br />
 Therefore, the semimajor axis (a) is
 <br />
@@ -178,7 +178,7 @@ Corrected argument of latitude:
 <img width="243" alt="Screenshot 2021-10-29 at 4 52 24 PM" src="https://user-images.githubusercontent.com/71690213/139415027-27acc67c-78bc-40d2-8b9b-ee019ef1c91d.png">
 <p align="center">
 
-<br />Where IDOT in the Column 17 of eph.dat.
+<br />Where IDOT in Column 17 of eph.dat.
 
 <br />Corrected longitude of ascending node:
 <p align="center">
@@ -199,7 +199,7 @@ Therefore, the Earth-fixed coordinates calculate by
 <p align="center"><img width="345" alt="Screenshot 2021-10-29 at 4 54 00 PM" src="https://user-images.githubusercontent.com/71690213/139415371-a008871b-474e-4702-b3d0-4c7bf778eb7c.png">
 <p align="center">
 
-However, the coordinates have some rotation error when transformed the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
+However, the coordinates have some rotation error when transforming the coordinate from ECEF coordinate to Earth-Centered, Inertial (ECI) coordinate system.
 
 The rotational matrix for coordinate transform correction:
 <p align="center"><img width="275" alt="Screenshot 2021-10-31 at 11 51 26 AM" src="https://user-images.githubusercontent.com/71690213/139566675-19e5d965-7424-4141-b00f-3bbbeeaffc70.png">
@@ -235,7 +235,7 @@ Using Saastamoinen model to enable tropospheric error estimation.
 <img width="261" alt="Screenshot 2021-10-29 at 4 57 35 PM" src="https://user-images.githubusercontent.com/71690213/139416037-0ec706c5-c046-456f-9a2e-62625d2e020a.png">
 <p align="center">
 
-<br />Tropospheric delay include two part which are the hydrostatic delay (trph) and wet delay (trpw).
+<br />Tropospheric delay includes two parts which are the hydrostatic delay (trph) and wet delay (trpw).
 <p align="center">
 <img width="688" alt="Screenshot 2021-10-29 at 4 58 12 PM" src="https://user-images.githubusercontent.com/71690213/139416048-80ff8d26-9d48-433f-8e26-07de28f74ae2.png">
 
@@ -266,7 +266,7 @@ Using least squares method to position:
 <img width="378" alt="Screenshot 2021-10-31 at 12 10 46 PM" src="https://user-images.githubusercontent.com/71690213/139567256-ec24de33-8729-4cda-ba54-fcaa924e76de.png">
 <p align="center">
 
-Where pr is the pseudorange in the Column 3 of rcvr.dat, <img width="69" alt="Screenshot 2021-10-31 at 12 08 50 PM" src="https://user-images.githubusercontent.com/71690213/139567158-ba9c6fbb-b18c-4432-8e0b-3c75519a9084.png"> is the approx position, <img width="18" alt="Screenshot 2021-10-31 at 12 09 21 PM" src="https://user-images.githubusercontent.com/71690213/139567185-77c6fcd2-38eb-4d24-a141-e13204d5e72e.png">
+Where pr is the pseudorange in Column 3 of rcvr.dat, <img width="69" alt="Screenshot 2021-10-31 at 12 08 50 PM" src="https://user-images.githubusercontent.com/71690213/139567158-ba9c6fbb-b18c-4432-8e0b-3c75519a9084.png"> is the approx position, <img width="18" alt="Screenshot 2021-10-31 at 12 09 21 PM" src="https://user-images.githubusercontent.com/71690213/139567185-77c6fcd2-38eb-4d24-a141-e13204d5e72e.png">
 the offset and a is a function of the elevation angles.
 
 <p align="center">
@@ -293,14 +293,14 @@ Update the position of ECEF and receiver clock offset:
 # Result
 
 <details open="open">
-<br />This report uses MATLAB as a tool to calculate all the process. Below shows all the result of the process. 
+<br />This report uses MATLAB as a tool to calculate all the processes. Below shows all the results of the process. 
 
-<br />It show that the initial position in Latitude, Longitude, Altitude coordinates system (LLA) and Earth-centered, Earth-fixed coordinates system (ECEF).
+<br />It shows that the initial position in Latitude, Longitude, Altitude coordinates system (LLA) and Earth-centered, Earth-fixed coordinates system (ECEF).
 <br />
 <img width="500" alt="Screenshot 2021-10-31 at 12 39 56 PM" src="https://user-images.githubusercontent.com/71690213/139568012-e74cdfec-d44e-4f68-9a1e-63a6539f4c34.png">
 <br />
 	
-The following table show that the result of all the iterations result.
+The following table shows that the result of all the iterations result.
 
 <p align="center">	
 <img width="718" alt="Screenshot 2021-10-31 at 12 43 11 PM" src="https://user-images.githubusercontent.com/71690213/139568095-b5c4c0a5-42f7-4549-8ebf-87ca9d911f2f.png">
