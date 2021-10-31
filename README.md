@@ -5,7 +5,7 @@
 <p align="center">
 
 <!-- Introdution -->
-## Introdution
+# Introdution
 This report uses the single-epoch data sets rcvr.dat and eph.dat to set up the linearized navigation equations and solve for user position and clock bias. Appendix A show the data file format of rcvr.dat and eph.dat.
 
 	
@@ -26,28 +26,29 @@ The required corrections for the satellite clock bias and relativity are referre
 The algorithm uses zero clock bias for Initialize. Terminate the iteration when the change in the estimate is suitably small.
 
 
-## Constants
-# GPS Constants:
+# Constants
+## GPS Constants:
 <br />Speed of light:                                         c = 299792458.0 (m/s)
 <br />WGS 84 value of earth’s rotation rate:                  Wedot= 7.2921151467e-5 (r/s)
 <br />WGS 84 value of earth's universal gravitation constant: mu= 3.986005e+14 (m^3/s^2)
 <br />Relativistic correction term constant:                  F= -4.442807633e-10
 
-# Tropospheric constant:
+## Tropospheric constant:
 <br />Pressure: 		  Pr = 1013.25(mbar)
 <br />Temperature: 		  Tr = 291.15(K)
 <br />Temperature at sea-level: temp_0 = 15
 
+#Calculation of processing
 
-Using the data of rcvr.dat and eph.dat, we can calculate the receiver’s position at time of week 440992 using the following process.
+Using the data of rcvr.dat and eph.dat, it can calculate the receiver’s position at time of week 440992 using the following process.
 
-	Calculate the XYZ positions for all valid satellite at time 440992.
+###### 1. Calculate the XYZ positions for all valid satellite at time 440992.
 
 
-First, calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
-Square root of semi-major axis a (Sqrta) was save in the Column 10 of eph.dat. 
-Therefore, the semimajor axis (a) is 
-	
+Calculate the satellite Earth-centered, Earth-fixed coordinate system (ECEF) position vector.
+
+Square root of semi-major axis a (Sqrta) was saved in the Column 10 of eph.dat.
+Therefore, the semimajor axis (a) is	
 <br /><img width="128" alt="Screenshot 2021-10-29 at 4 50 39 PM" src="https://user-images.githubusercontent.com/71690213/139407961-a6c07131-4723-4909-a11d-1709382fe2d7.png">
 
 <br />The corrected mean motion(n):
@@ -133,7 +134,7 @@ The rotational matrix for coordinate transform correction:
 t_SV: The individual satellite time.
 
 	
-	Estimate the tropospheric delay for each satellite (optional).
+###### Estimate the tropospheric delay for each satellite (optional).
 <br />First, resolve the tropospheric error of each iteration. 
 Using iterative algorithm to transform the initial position of ECEF coordinates to Geodetic coordinates (ϕ,λ,h).
 ECEF coordinates=
