@@ -304,13 +304,13 @@ The following table show that the result of all the iterations result.
 <p align="center">
 
 To summarize, 
-The initial position of ECEF is X= -2694685.4730(m), Y=-4293642.3660(m) and Z=3857878.9240(m). 
-The final position of ECEF is X= -2700369.8496(m), Y= -4292569.1647(m) and Z= 3855264.5930(m). 
-The target position of ECEF is X= -2700400.0000(m), Y=-4292560.0000(m) and Z=3855270.0000(m).
+<br />The initial position of ECEF is X= -2694685.4730(m), Y=-4293642.3660(m) and Z=3857878.9240(m). 
+<br />The final position of ECEF is X= -2700369.8496(m), Y= -4292569.1647(m) and Z= 3855264.5930(m). 
+<br />The target position of ECEF is X= -2700400.0000(m), Y=-4292560.0000(m) and Z=3855270.0000(m).
 
-The final position error is 31.9730(m). 
+<br />The final position error is 31.9730(m). 
 
-As the time of the week of this report is 440992 which is the time that receiver thinks. However, it has a different error between the true time and the time that receiver thinks such as tropospheric error, satellite clock error, and rotation error which this report has mentioned. The previous result finds that the estimate of the user clock bias b is 0.0017327(s), 519449.6336(m). Therefore, the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds. However, this report has some of the errors that did not mentioned. Therefore, the result still has a 0.0000127 (s) error.
+<br />As the time of the week of this report is 440992 which is the time that receiver thinks. However, it has a different error between the true time and the time that receiver thinks such as tropospheric error, satellite clock error, and rotation error which this report has mentioned. The previous result finds that the estimate of the user clock bias b is 0.0017327(s), 519449.6336(m). Therefore, the reported receiver clock time at this epoch (Column 1 of the rcvr matrix) is 440992.00173454 seconds. However, this report has some of the errors that did not mentioned. Therefore, the result still has a 0.0000127 (s) error.
 
 </details> 
  
