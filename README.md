@@ -16,17 +16,17 @@ The linearized navigation equation:
 
 The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set.
 
-Tropospheric correction based on standard atmosphere model is optional. 
-The initial position to start the iteration using 
+The required corrections for the satellite clock bias and relativity are referred to ICD. This report will skip the ionospheric corrections because we do not have access to the parameter values of the Klobuchar model for this data set. This report will consider the tropospheric correction based on standard atmosphere model. 
+
+![image](https://user-images.githubusercontent.com/71690213/139564787-5f79a815-edbc-47bc-8e0f-fd5173f4bf7e.png)
+
 <br />
 	
 	[ −2694685.473 ] 
-
-	[ −4293642.366 ] 
-
-	[ 3857878 . 924 ] 
+	[ −4293642.366 ] , (WGS 84 XYZ, in meters)
+	[ 3857878 .924 ] 
 <br />
-(WGS 84 XYZ, in meters). The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
+The algorithm uses zero clock bias for Initialize.  Terminate the iteration when the change in the estimate is suitably small.
 
 
 GPS Constants:
