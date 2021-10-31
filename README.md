@@ -276,7 +276,5 @@ As the time of the week of this report is 440992 which is the time that receiver
 
 # Data file
 <details open="open">
-		     <br />
-<strong>[eph.dat](https://github.com/tungtungyan/21063325r-LeungYanTung-AAE6102-Assignment/blob/main/eph.dat)</strong>
-<strong>[rcvr.dat](https://github.com/tungtungyan/21063325r-LeungYanTung-AAE6102-Assignment/blob/main/rcvr.dat)</strong>
+<a href="Data/"><strong>Data</strong></a>
 </details> 
